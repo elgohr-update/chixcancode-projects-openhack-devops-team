@@ -52,3 +52,4 @@ jobs:
         with:
           app-name: 'openhack4t18p479poi'
           images: ${{ env.CONTAINER_REGISTRY }}/chixcancode-projects/openhack-devops-team/poi:latest
+          slot-name: 'openhack4t18p479poi-staging'
