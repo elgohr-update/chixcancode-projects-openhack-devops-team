@@ -72,5 +72,5 @@ jobs:
         uses: azure/powershell@v1
         with:
           inlineScript: |
-            Switch-AzureRmWebAppSlot -SourceSlotName "staging" -DestinationSlotName "default" -ResourceGroupName "openhack4t18p479rg" -Name "openhack4t18p479"
-          azPSVersion: '6.13.0'
+             Switch-AzWebAppSlot -SourceSlotName "staging" -DestinationSlotName "default" -ResourceGroupName "openhack4t18p479rg" -Name "openhack4t18p479"
+          azPSVersion: '3.8.0'
