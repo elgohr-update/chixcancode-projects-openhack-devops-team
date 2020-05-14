@@ -22,4 +22,5 @@ jobs:
         username: ${{ github.actor }}
         password: ${{ secrets.githubtoken }}
         registry: docker.pkg.github.com
+        tags: "latest,${{ GITHUB_RUN_NUMBER }}" 
         workdir: ./apis/poi/web
