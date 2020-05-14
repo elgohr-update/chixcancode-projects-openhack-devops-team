@@ -75,4 +75,4 @@ jobs:
         uses: azure/CLI@v1
         with:
           inlineScript: |
-             az webapp deployment slot swap  -g openhack4t18p479rg -n openhack4t18p479 --slot staging --target-slot production
+             az webapp deployment slot swap  -g openhack4t18p479rg -n openhack4t18p479userprofile --slot staging --target-slot production
