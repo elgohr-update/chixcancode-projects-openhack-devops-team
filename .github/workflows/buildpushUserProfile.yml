@@ -59,9 +59,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Test the Staging Slot
-      run: .\UrlValidation.ps1 -Uri https://openhack4t18p479userjava.azurewebsites.net/api/healthcheck/user-java
+      working-directory: .github/workflows
+      run: PS .\UrlValidation.ps1 -Uri https://openhack4t18p479userjava.azurewebsites.net/api/healthcheck/user-java
       shell: pwsh
-      working-directory: ./.github/workflows/
+      
 
     
   swap:
