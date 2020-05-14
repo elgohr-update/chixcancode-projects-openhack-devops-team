@@ -71,9 +71,8 @@ jobs:
         uses: azure/login@v1
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
-      - name: Run Azure PowerShell script
-        uses: azure/powershell@v1
+      - name: Run CLI script
+        uses: azure/CLI@v1
         with:
           inlineScript: |
-             Switch-AzWebAppSlot -SourceSlotName "staging" -DestinationSlotName "default" -ResourceGroupName "openhack4t18p479rg" -Name "openhack4t18p479"
-          azPSVersion: '3.8.0'
+             az webapp deployment slot swap  -g openhack4t18p479rg -n openhack4t18p479 --slot staging --target-slot production
