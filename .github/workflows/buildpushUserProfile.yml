@@ -54,6 +54,11 @@ jobs:
   test:
     needs: [deploy]
     runs-on: ubuntu-latest
+    steps:
+    - name: Test the Staging Slot
+      run: echo ${env:PATH}
+      shell: pwsh
+
     
   swap:
     needs: [test]
@@ -67,5 +72,5 @@ jobs:
         uses: azure/powershell@v1
         with:
           inlineScript: |
-            Switch-AzureRmWebAppSlot -SourceSlotName "staging" -DestinationSlotName "openhack4t18p479userprofile" -ResourceGroupName "openhack4t18p479rg" -Name "openhack4t18p479"
+            Switch-AzureRmWebAppSlot -SourceSlotName "staging" -DestinationSlotName "default" -ResourceGroupName "openhack4t18p479rg" -Name "openhack4t18p479"
           azPSVersion: '6.13.0'
