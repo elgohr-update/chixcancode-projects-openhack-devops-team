@@ -5,6 +5,9 @@ on:
     branches: [ master ]
   pull_request:
     branches: [ master ]
+
+env:
+  CONTAINER_REGISTRY: docker.pkg.github.com # Container Registry name
   
 jobs:
 
